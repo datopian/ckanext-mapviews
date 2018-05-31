@@ -2,6 +2,7 @@ import urlparse
 
 import ckan.plugins as p
 import pylons.config as config
+from ckan.lib.plugins import DefaultTranslation
 
 Invalid = p.toolkit.Invalid
 _ = p.toolkit._
@@ -24,11 +25,12 @@ def url_is_relative_or_in_same_domain(url):
     return url
 
 
-class NavigableMap(p.SingletonPlugin):
+class NavigableMap(p.SingletonPlugin, DefaultTranslation):
     '''Creates a map view'''
 
     p.implements(p.IConfigurer, inherit=True)
     p.implements(p.IResourceView, inherit=True)
+    p.implements(p.ITranslation)
 
     def update_config(self, config):
         p.toolkit.add_template_directory(config, 'theme/templates')
@@ -45,7 +47,7 @@ class NavigableMap(p.SingletonPlugin):
         }
 
         return {'name': 'navigable-map',
-                'title': 'Navigable Map',
+                'title': _('Navigable Map'),
                 'icon': 'map-marker',
                 'schema': schema,
                 'iframed': False,
@@ -80,13 +82,13 @@ class NavigableMap(p.SingletonPlugin):
         return 'navigablemap_form.html'
 
 
-class ChoroplethMap(NavigableMap):
+class ChoroplethMap(NavigableMap, DefaultTranslation):
     '''Creates a choropleth map view'''
 
     def info(self):
         info = super(ChoroplethMap, self).info()
         info['name'] = 'choropleth-map'
-        info['title'] = 'Choropleth Map'
+        info['title'] = _('Choropleth Map')
         info['schema']['resource_value_field'] = [not_empty]
         info['filterable'] = True
 

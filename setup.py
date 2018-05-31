@@ -28,4 +28,11 @@ setup(
 	navigablemap=ckanext.mapviews.plugin:NavigableMap
 	choroplethmap=ckanext.mapviews.plugin:ChoroplethMap
 	""",
+	message_extractors={
+        'ckanext': [
+            ('**.py', 'python', None),
+            ('**.js', 'javascript', None),
+            ('**/templates/**.html', 'ckan', None),
+        ],
+    }
 )
