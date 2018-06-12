@@ -11,7 +11,6 @@ ckan.module('mapviews-export-png', function($) {
             var container = document.body;
 
             window.scrollTo(0, 0);
-            document.body.style.fontFamily = '"Roboto",Helvetica,Arial,sans-serif'
 
             html2canvas(container, {
                 allowTaint: true,
@@ -21,8 +20,7 @@ ckan.module('mapviews-export-png', function($) {
                     return false
                 }
             }).then(function(canvas) {
-                Canvas2Image.saveAsPNG(canvas);
-                document.body.style.fontFamily = '"Roboto Condensed",Helvetica,Arial,sans-serif'                
+                Canvas2Image.saveAsPNG(canvas);             
             });
             window.scrollTo(0, scrollY);
         }
