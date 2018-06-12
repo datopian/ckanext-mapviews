@@ -92,7 +92,7 @@ this.ckan.views.mapviews.navigablemap = (function () {
       }
 
       if (elementData && elementData.label) {
-        layer.bindLabel(elementData.label);
+        layer.bindTooltip(elementData.label);
         layer.on(eventsCallbacks);
       }
     };

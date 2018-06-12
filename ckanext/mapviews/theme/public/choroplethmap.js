@@ -83,9 +83,9 @@ this.ckan.views.mapviews.choroplethmap = (function () {
 
       if (label) {
         var layerLabel = elementData.label + ': ' + (value || noDataLabel);
-        layer.bindLabel(layerLabel);
+        layer.bindTooltip(layerLabel);
       } else {
-        layer.bindLabel(noDataLabel);
+        layer.bindTooltip(noDataLabel);
       }
     };
   }
