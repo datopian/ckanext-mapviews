@@ -1,7 +1,9 @@
 {% resource "mapviews/main" %}
 {% resource "mapviews/vendor/html2canvas.js" %}
 {% resource "mapviews/vendor/canvas2image.js" %}
+{% resource "mapviews/vendor/jsPDF.js" %}
 {% resource "mapviews/modules/export-png.js" %}
+{% resource "mapviews/modules/export-pdf.js" %}
 
   <div
   data-module = "choroplethmap"
@@ -24,6 +26,6 @@
   </button>
   <ul class="dropdown-menu">
     <li data-module="mapviews-export-png" data-module-map-container-class="navigablemap"><a href="#">PNG</a></li>
-    <li><a href="#">PDF</a></li>
+    <li data-module="mapviews-export-pdf" data-module-map-container-class="navigablemap"><a href="#">PDF</a></li>
   </ul>
 </div>
