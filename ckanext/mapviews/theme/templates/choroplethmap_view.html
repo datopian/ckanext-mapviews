@@ -1,9 +1,10 @@
 {% resource "mapviews/main" %}
 {% resource "mapviews/vendor/html2canvas.js" %}
 {% resource "mapviews/vendor/canvas2image.js" %}
-{% resource "mapviews/vendor/jsPDF.js" %}
+{% resource "mapviews/polyfill.includes.js" %}
+{% resource "mapviews/polyfill.promise.js" %}
+{% resource "mapviews/vendor/leaflet.easyprint.js" %}
 {% resource "mapviews/modules/export-png.js" %}
-{% resource "mapviews/modules/export-pdf.js" %}
 
   <div
   data-module = "choroplethmap"
@@ -17,15 +18,6 @@
   data-module-filter-fields = "{{ h.dump_json(resource_view.filters) if resource_view.filters else '' }}"
   id = "choroplethmap-{{ resource_view.id }}"
   class = "navigablemap choroplethmap"
+  style="width: 100%; height: 500px"
   >
-</div>
-
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Export <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li data-module="mapviews-export-png" data-module-map-container-class="navigablemap"><a href="#">PNG</a></li>
-    <li data-module="mapviews-export-pdf" data-module-map-container-class="navigablemap"><a href="#">PDF</a></li>
-  </ul>
 </div>

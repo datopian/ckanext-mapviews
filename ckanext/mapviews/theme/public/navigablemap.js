@@ -47,6 +47,28 @@ this.ckan.views.mapviews.navigablemap = (function () {
     bounds = geojsonLayer.getBounds();
     maxBounds = bounds.pad(0.1);
 
+    L.easyPrint({
+      title: 'Преземи мапа',
+      position: 'topleft',
+      sizeModes: ['Current'],
+      defaultSizeTitles: {
+        'Current': 'Моментална големина'
+      },
+      exportOnly: true,
+      hideControlContainer: false
+    }).addTo(map);
+
+    L.easyPrint({
+      title: 'Преземи мапа',
+      position: 'topleft',
+      sizeModes: ['Current'],
+      defaultSizeTitles: {
+        'Current': 'Моментална големина'
+      },
+      exportOnly: false,
+      hideControlContainer: false
+    }).addTo(map);
+
     map.fitBounds(bounds);
     map.setMaxBounds(maxBounds);
 
@@ -56,7 +78,7 @@ this.ckan.views.mapviews.navigablemap = (function () {
   function _addBaseLayer(map) {
     var attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
-    return L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    return L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}.png', {
       attribution: attribution
     }).addTo(map);
   }
