@@ -85,6 +85,8 @@ class NavigableMap(p.SingletonPlugin, DefaultTranslation):
 class ChoroplethMap(NavigableMap, DefaultTranslation):
     '''Creates a choropleth map view'''
 
+    p.implements(p.ITranslation)
+
     def info(self):
         info = super(ChoroplethMap, self).info()
         info['name'] = 'choropleth-map'

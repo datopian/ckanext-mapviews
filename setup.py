@@ -27,6 +27,9 @@ setup(
     [ckan.plugins]
 	navigablemap=ckanext.mapviews.plugin:NavigableMap
 	choroplethmap=ckanext.mapviews.plugin:ChoroplethMap
+
+	[babel.extractors]
+    ckan = ckan.lib.extract:extract_ckan
 	""",
 	message_extractors={
         'ckanext': [

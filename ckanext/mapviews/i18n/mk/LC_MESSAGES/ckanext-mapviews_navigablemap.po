@@ -1,0 +1,77 @@
+# Macedonian translations for ckanext-mapviews.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the ckanext-mapviews
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-mapviews 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-05-31 07:54+0200\n"
+"PO-Revision-Date: 2018-06-09 00:36+0200\n"
+"Language: mk\n"
+"Language-Team: mk <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.8\n"
+
+#: ckanext/mapviews/plugin.py:22
+msgid "Must be a relative URL or in the same domain as CKAN"
+msgstr "Мора да биде релативна URL адреса или во истиот домен како CKAN"
+
+#: ckanext/mapviews/plugin.py:50
+msgid "Navigable Map"
+msgstr "Навигирачка мапа"
+
+#: ckanext/mapviews/plugin.py:91
+msgid "Choropleth Map"
+msgstr "Короплет Карта"
+
+#: ckanext/mapviews/theme/public/ckan_map_modules.js:51
+msgid "No data"
+msgstr "Нема податоци"
+
+#: ckanext/mapviews/theme/templates/choroplethmap_form.html:9
+msgid "Value"
+msgstr "Вредност"
+
+#: ckanext/mapviews/theme/templates/navigablemap_form.html:14
+msgid "Add Field"
+msgstr "Додадете поле"
+
+#: ckanext/mapviews/theme/templates/navigablemap_form.html:25
+msgid "Remove Field"
+msgstr "Отстранете поле"
+
+#: ckanext/mapviews/theme/templates/navigablemap_form.html:33
+msgid "GeoJSON Resource"
+msgstr "GeoJSON ресурс"
+
+#: ckanext/mapviews/theme/templates/navigablemap_form.html:39
+msgid "GeoJSON Key Field"
+msgstr "GeoJSON клучно поле"
+
+#: ckanext/mapviews/theme/templates/navigablemap_form.html:45
+msgid "Key"
+msgstr "Клуч"
+
+#: ckanext/mapviews/theme/templates/navigablemap_form.html:50
+msgid "Label"
+msgstr "Ознака"
+
+#: ckanext/mapviews/theme/templates/navigablemap_form.html:57
+msgid "Redirect to URL"
+msgstr "Пренасочи кон УРЛ"
+
+#: ckanext/mapviews/theme/templates/navigablemap_form.html:60
+msgid ""
+"If left blank, clicking on a region will update the filters on the same "
+"page"
+msgstr ""
+"Ако се остави празно, со кликнување на регион ќе се ажурираат филтрите "
+"на истата страница"
