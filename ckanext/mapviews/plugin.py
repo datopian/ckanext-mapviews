@@ -1,7 +1,9 @@
-import urlparse
+import urllib.parse as urlparse
 
 import ckan.plugins as p
-import pylons.config as config
+# import pylons.config as config
+from ckan.plugins.toolkit import config
+
 
 Invalid = p.toolkit.Invalid
 _ = p.toolkit._
