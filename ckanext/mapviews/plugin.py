@@ -1,9 +1,8 @@
-import urllib.parse as urlparse
+from urllib.parse import urlparse
 
 import ckan.plugins as p
-# import pylons.config as config
-from ckan.plugins.toolkit import config
 
+config = p.toolkit.config
 
 Invalid = p.toolkit.Invalid
 _ = p.toolkit._
@@ -13,8 +12,8 @@ aslist = p.toolkit.aslist
 
 
 def url_is_relative_or_in_same_domain(url):
-    site_url = urlparse.urlparse(config.get('ckan.site_url', ''))
-    parsed_url = urlparse.urlparse(url)
+    site_url = urlparse(config.get('ckan.site_url', ''))
+    parsed_url = urlparse(url)
 
     is_relative = (parsed_url.netloc == '')
     is_in_same_domain = (parsed_url.netloc == site_url.netloc)
